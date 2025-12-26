@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8">
   <title>Mirakle</title>
-
-  <!-- PWA / iPhone fullscreen meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="apple-touch-icon" href="mirakle.png">
 
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      position: fixed;
+    }
+
     body {
-    background-color: #f3f3f3;
-
-    /* Prevent iOS from auto-scaling fonts in PWA/fullscreen */
-    -webkit-text-size-adjust: 100%; 
-    font-family: 'YourFontName', sans-serif; /* optional: set your font */
-    font-size: 14px; /* your original size in px */
-    line-height: 1.4; /* optional */
-    margin: 0; /* reset default margin */
-    padding: 0; /* reset default padding */
-  }
-
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ffffff;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: none;
+    }
     .login-border {
     display: inline-block;
     width: 80vw;
@@ -497,11 +514,15 @@
 .darken-profile-label {
     display: inline-block;
     width: 100vw;
+    width: 100%;
     height: 100vh;
+    height: 100dvh;
     transform: translate(0%, 0%);
-    position: absolute;
-    top: 0vh;
-    left: 0vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     line-height: 40px;
     text-align: left;
     border: 0px solid white;
@@ -509,6 +530,10 @@
     color: rgb(255 255 255);
     font-size: 55px;
     background: rgb(0 0 0 / 50%);
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
   .password-label {
     display: inline-block;
@@ -1619,11 +1644,15 @@
 .darken-main-label {
     display: inline-block;
     width: 100vw;
+    width: 100%;
     height: 100vh;
+    height: 100dvh;
     transform: translate(0%, 0%);
-    position: absolute;
-    top: 0vh;
-    left: 0vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     line-height: 40px;
     text-align: left;
     border: 0px solid white;
@@ -1631,6 +1660,10 @@
     color: rgb(255 255 255);
     font-size: 55px;
     background: rgb(0 0 0 / 50%);
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 
 .commentwb-exit-label {
@@ -1898,11 +1931,15 @@
 .darken-commentadd-label {
     display: inline-block;
     width: 100vw;
+    width: 100%;
     height: 100vh;
+    height: 100dvh;
     transform: translate(0%, 0%);
-    position: absolute;
-    top: 0vh;
-    left: 0vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     line-height: 40px;
     text-align: left;
     border: 0px solid white;
@@ -1910,6 +1947,10 @@
     color: rgb(255 255 255);
     font-size: 55px;
     background: rgb(0 0 0 / 50%);
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 
 

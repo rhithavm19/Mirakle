@@ -6,16 +6,8 @@
   <link rel="apple-touch-icon" href="mirakle.png">
 
   <style>
-
-    html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-  }
     body {
     background-color: #ffffff;
-    min-height: calc(var(--vh) * 100);
   }
     .login-border {
     display: inline-block;
@@ -32,14 +24,14 @@
     background: rgb(232 232 232);
 }
 
-    .mirakle-login {
-      width: 14vh;
-      height: 10vh;
-      position: absolute;
-      top: 16vh;
-      left: 50vw;
-      transform: translate(-50%, 0%);
-  }
+.mirakle-login {
+    width: 10vh;
+    height: 8vh;
+    position: absolute;
+    top: 17.5vh;
+    left: 50vw;
+    transform: translate(-50%, 0%);
+}
 
     .username-input {
       width: 57vw;
@@ -166,7 +158,7 @@
     top: 100vh;
     left: 50vw;
     transform: translate(-50%, -100%);
-    padding: 10px 32px;
+    padding: 0px 32px;
     font-size: 50px;
     border: 0px solid white;
     background: rgb(40, 40, 40);
@@ -1303,17 +1295,17 @@
 
 .main-sidebar-bg {
     display: inline-block;
-    width: 9vw;
+    width: 8vw;
     height: 33vh;
     position: fixed;
-    top: 67.3vh;
+    top: 68vh;
     left: 91.5vw;
     transform: translate(-50%, -100%);
     line-height: 40px;
     text-align: center;
     border: 20px solid #ffffff00;
     border-radius: 100px;
-    background: #0000008a;
+    background: #00000094;
 }
 
 .main-caption-name {
@@ -1351,8 +1343,8 @@
 }
 .main-heart {
     display: inline-block;
-    width: 9vw;
-    height: 8vw;
+    width: 8vw;
+    height: 7vw;
     position: fixed;
     top: 35vh;
     left: 87.3vw;
@@ -1371,7 +1363,7 @@
     width: 9vw;
     height: 3.5vw;
     position: fixed;
-    top: 38.7vh;
+    top: 39vh;
     left: 87.3vw;
     transform: translate(0%, -0%);
     line-height: 40px;
@@ -1380,16 +1372,16 @@
     border-radius: 0px;
     color: #ffffff;
     background: #00000000;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .main-profile {
     display: inline-block;
-    width: 10vw;
-    height: 10vw;
+    width: 9vw;
+    height: 9vw;
     position: fixed;
-    top: 60.7vh;
-    left: 86.6vw;
+    top: 62vh;
+    left: 87vw;
     transform: translate(0%, -0%);
     line-height: 40px;
     text-align: left;
@@ -1402,10 +1394,10 @@
 
 .main-comment {
     display: inline-block;
-    width: 9.7vw;
-    height: 8vw;
+    width: 9vw;
+    height: 7.5vw;
     position: fixed;
-    top: 42vh;
+    top: 42.5vh;
     left: 87vw;
     transform: translate(0%, -0%);
     line-height: 40px;
@@ -1419,10 +1411,10 @@
 
 .main-comment-c {
     display: inline-block;
-    width: 9vw;
+    width: 8vw;
     height: 3.5vw;
     position: fixed;
-    top: 45.8vh;
+    top: 46.5vh;
     left: 87.3vw;
     transform: translate(0%, -0%);
     line-height: 40px;
@@ -1431,7 +1423,7 @@
     border-radius: 0px;
     color: #ffffff;
     background: #00000000;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .main-whiteboard {
@@ -1439,7 +1431,7 @@
     width: 9.7vw;
     height: 8.8vw;
     position: fixed;
-    top: 48.7vh;
+    top: 49.7vh;
     left: 86.6vw;
     transform: translate(0%, -0%);
     line-height: 40px;
@@ -1453,11 +1445,11 @@
 
 .main-whiteboard-c {
     display: inline-block;
-    width: 9vw;
+    width: 8vw;
     height: 3.5vw;
     position: fixed;
-    top: 53vh;
-    left: 87vw;
+    top: 54.3vh;
+    left: 87.5vw;
     transform: translate(0%, -0%);
     line-height: 40px;
     text-align: center;
@@ -1465,7 +1457,7 @@
     border-radius: 0px;
     color: #ffffff;
     background: #00000000;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .main-search {
@@ -1505,7 +1497,7 @@
     width: 11vw;
     height: 10.5vw;
     position: fixed;
-    top: 55.2vh;
+    top: 56.3vh;
     left: 86.6vw;
     transform: translate(0%, -0%);
     line-height: 40px;
@@ -2164,7 +2156,14 @@
 
   <script>
 
+function fixVH() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
 
+fixVH();
+window.addEventListener('resize', fixVH);
+window.addEventListener('orientationchange', fixVH);
   let name = "User1234"
   let username = "@user10"
   let password = "pass1234";
@@ -4400,3 +4399,4 @@ function changepassword() {
 
 </body>
 </html>
+

@@ -15,8 +15,16 @@
 
   <style>
     body {
-      background-color: #f3f3f3;
-    }
+    background-color: #f3f3f3;
+
+    /* Prevent iOS from auto-scaling fonts in PWA/fullscreen */
+    -webkit-text-size-adjust: 100%; 
+    font-family: 'YourFontName', sans-serif; /* optional: set your font */
+    font-size: 14px; /* your original size in px */
+    line-height: 1.4; /* optional */
+    margin: 0; /* reset default margin */
+    padding: 0; /* reset default padding */
+  }
 
     .login-border {
     display: inline-block;
